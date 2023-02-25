@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\BookingController;
+use App\Http\Controllers\OrderController;
 use App\Http\Controllers\UserController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -23,7 +24,14 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::get('/bookings', [BookingController::class, 'index']);
 Route::get('confirm-email/{token}', [UserController::class, 'confirmEmail']);
 Route::post('register', [UserController::class, 'register']);
-Route::post('login', [UserController::class, 'login']);
+Route::post('/login', [UserController::class, 'login']);
+
+Route::middleware('auth:sanctum')->group( function () {
+    Route::post('/orders', [OrderController::class, 'placeOrder']);
+    Route::post('/orders/cancel/{id}', [OrderController::class, 'cancelOrder']);
+    Route::delete('/orders/delete/{id}', [OrderController::class, 'deleteOrder']);
+    Route::get('/orders/export/csv/{id}', [OrderController::class, 'exportToCsv']);
+});
 
 
 

@@ -48,14 +48,11 @@ class UserController extends Controller
 
     public function login(Request $request)
     {
-        $credentials = [
-            'email' => $request->email,
-            'password' => $request->password,
-        ];
+        $credentials = $request->only('email', 'password');
 
         if (Auth::attempt($credentials)) {
             $user = Auth::user();
-            $token = $user->createToken('auth_token')->plainTextToken;
+            $token = $user->createToken('token-name')->plainTextToken;
             return response()->json([
                 'status' => 'success',
                 'token' => $token,
