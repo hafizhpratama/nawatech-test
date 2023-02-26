@@ -90,6 +90,8 @@ curl -X POST \
 
 [API Documentation](https://drive.google.com/file/d/1mZB0KsvlC43EwCWS6gbLDTPMGJLYxsmk/view)
 
+[Postman Collection](https://api.postman.com/collections/14076346-988e3926-658c-440b-bea9-f2621e260419?access_key=PMAT-01GT629HA7SETEH2N96TRXD5HC)
+
 ## API Endpoints Project 2
 
 The following endpoints are available in the API:
