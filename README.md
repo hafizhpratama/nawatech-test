@@ -55,7 +55,7 @@ Start the local development server
 You can now access the server at http://localhost:8000
 
 
-## API Endpoints
+## API Endpoints Project 1
 
 The following endpoints are available in the API:
 
@@ -89,3 +89,11 @@ curl -X POST \
 [Database Documentation](https://drive.google.com/file/d/1vIwCF9HLJ4Bg_UdCE--ViLFHXXD59d_U/view)
 
 [API Documentation](https://drive.google.com/file/d/1mZB0KsvlC43EwCWS6gbLDTPMGJLYxsmk/view)
+
+## API Endpoints Project 2
+
+The following endpoints are available in the API:
+
+| Method | Endpoint     | Description                |
+| :-------- | :------- | :------------------------- |
+| GET | `/bookings` | manipulated json to your API |

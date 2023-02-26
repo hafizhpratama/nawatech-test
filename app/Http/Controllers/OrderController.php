@@ -31,7 +31,7 @@ class OrderController extends Controller
             'status' => 'pending',
         ]);
 
-        Log::info('Order created', [
+        Log::channel('order')->info('Order created', [
             'user_id' => $request->user()->id,
             'delivery_address' => $request->delivery_address,
             'motorcycle' => $request->motorcycle,
